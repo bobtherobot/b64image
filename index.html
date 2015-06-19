@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Base64 Encode &amp; Decode Images</title>
+	
+	<meta name="Keywords" content="list,of,lkeywords">
+	<meta name="Description" content="nice_tight_description">
+	
+	<link href="index.css" rel="stylesheet">
+	
+	<!-- Github Fork Me Banner -->
+	<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+
+</head>
+<body>
+	
+	<div class="row">
+		<h1>Base64 Encode &amp; Decode Images </h1>
+	</div>
+	<div class="row">
+		<div class="col-half">
+			- Generate CSS and HTML code to embed images.<br />
+			- Recover base64 image strings into image files.<br />
+			&nbsp;<br />
+			<strong>This only works with modern browsers</strong>
+		</div>
+		<div class="col-half">
+			<strong>Encode: </strong> Drag and drop an image into grey box.<br />
+			<strong>Decode: </strong> Paste a base64 string into the yellow box.<br />
+			<strong>Save Image: </strong> Right-click on image and "save as" to recoup.<br />
+			<strong>HINT: </strong> Change the background color to see small images?
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-half">
+		
+			<p>Raw</p>
+			<textarea class="outAsTextArea" type="textarea" id="outAsRaw" onpaste="pasteText()">Copy and paste base64'd data in here.</textarea>
+
+			<p>CSS Class</p>
+			<textarea class="outAsTextArea" readonly tye="textarea" id="outAsCss"></textarea>
+
+			<p>HTML Image</p>
+			<textarea class="outAsTextArea" readonly tye="textarea" id="outAsImg"></textarea>
+		</div>
+	
+		<div class="col-half">
+			<div class="row">
+				Background color: 
+					<input type="color" 
+							id="bkgdColorChooser" 
+							onChange="setNewBkgdColor()" 
+							value="#4C4C4C" />
+			</div>
+			<div class="row">
+				<div id="imageTarget">Drag 'n drop image here</div>
+			</div>
+			<div class="row">
+				<span id="charCount" class="pull-left">0 KB</span>
+				<span id="dimensions" class="pull-right">
+					<span id="imageDimsW">0</span> x <span id="imageDimsH">0</span> px
+				</span>
+			</div>
+		</div>	
+	</div>
+
+	<div class="row">
+		<a href="http://www.gieson.com">Copyright &copy; 2015 Michael Gieson</a>
+	</div>
+	
+	<script src="jquery.min.js"></script>
+	
+	<script src="app.js"></script>
+</body>
+</html>
